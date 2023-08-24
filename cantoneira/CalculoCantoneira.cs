@@ -8,26 +8,23 @@ namespace cantoneira
 {
     internal class CalculoCantoneira
     {
-        public int Cantoneira(int n)
+     
+        public List<string> Cantoneira(int n)
         {
-            for (int x = 0;x <=n;x++)
+            List<string> valor = new List<string>();
+            for (int x = 1; x <= 1; x++)
             {
-                Console.WriteLine(x);
-                if (x == 0)
+                string espaco = new string(' ',n + x);
+                string numero = "";
+                 
+                for (int y = 1; y <= n; y++)
                 {
-                    break;
-                }
-                else
-                {
-                    for(int y = 1; y<=x;y++)
-                    {
-                        if(x>=y)
-                        {
-                            return y;
-                        }
-                    }
+                    numero += y;
+
+                    valor.Add(numero);
                 }
             }
+            return valor;
         }
-    }
+    }   
 }
